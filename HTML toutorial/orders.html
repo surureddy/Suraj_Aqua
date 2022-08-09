@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuRaj Aqua Oreders</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Alegreya+Sans:wght@300&family=Arima&family=Edu+NSW+ACT+Foundation&family=Edu+SA+Beginner&family=Montserrat+Alternates&display=swap" rel="stylesheet"> 
+<style>
+    *{
+    padding: 0;margin: 0;
+}
+
+header{
+    background-color: #32B6E0;
+
+}
+.nav{
+    display: flex;
+   height: 15vh;
+
+}
+.nav ul {
+    list-style: none;
+    padding-left: 55vw;
+}
+header ul li a{
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+}
+.im img{
+    height: 15vh;}
+
+header ul{
+    padding-top: 10vh;
+    display: flex;
+    text-align: center;
+}
+
+div sub{
+    font-size: 25px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.pu{
+    padding-top: 100px ;
+    height: 5vh;
+    /* background-color: red; */
+    font-size: 30px;
+    display: inline; text-align: center;
+   
+}
+.l1{
+    margin: 0vw 15vw;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+}
+.l20{
+    margin: 0vw 15vw;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+}
+.cool{
+    margin: 0vw 10vw;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+}
+.total{
+    margin: 0vw 10vw;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+}
+.p{
+    font-size: 35px;
+}
+.cool p{
+    margin: 0px 80px;
+}
+.l20 p{
+    margin: 0px 143px 0px -9px;
+}
+.l1 p{
+    margin: 0px 164px 0px -9px;
+}
+.l20 input{
+    margin: 0px 88px 0px 0px;
+}
+.l1 input{
+    margin: 0px 80px 0px 0px;
+}
+.total input{
+    margin: 0px 80px 0px 0px;
+   
+}
+.total p{
+    padding: 0px 102px;
+    color: red;
+    text-decoration: solid;
+}
+.place{
+    justify-content: center;
+    text-align: center;
+    
+}
+.place button{
+    padding: 15px 35px;
+    margin: 120px;
+    background-color: #32B6E0;
+    border-radius: 30px;
+}
+.ord{
+    font-family: 'Albert Sans', sans-serif;
+
+    font-family: 'Alegreya Sans', sans-serif;
+
+    font-family: 'Arima', cursive;
+
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+    font-family: 'Edu SA Beginner', cursive;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+</style>
+<header>
+    <div class="bar"></div>
+    <div class="nav">
+        <div class="im"><img src="logo.png" alt=""></div>
+        <ul>
+            <li><a href="../about_us.html"> About us</a></li>
+            <li> <a href="orders.html">Orders</a> </li>
+            <li><a href="../log_in.html">sign in/sign up</a> </li>
+            <li><a href="../index.html">Home</a> </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="ord">
+        <div class="p"><p>Select Produts:</p></div>
+        <div class="l1">
+           <p>1l:</p> 
+           <input type="text" name="Quantity" id="l1" value="0" onchange="totalfunction()">
+            <p>100rs/Box</p>
+        </div>
+        <div class="l20">
+            <p>20l:</p>
+            <input type="text" name="Quantity" id="l20" value="0" onchange="totalfunction()">
+            <p>50rs/jar</p>
+        </div>
+        <div class="cool">
+            <p>cool jar:</p>
+            <input type="text" name="Quantity" id="cooljar" value="0" onchange="totalfunction()">
+            <p>80rs/jar</p>
+        </div>
+        <div class="total">
+            <p>Total</p>
+            <input type="text" id="total" value="0">
+        </div>
+    </div>
+
+    <div class="place">
+        <button id="total1" onclick="totalfunction()">Get Total order amount</button>
+        <button>Place Order</button>
+        
+    </div>
+    <script>
+    var a=0;
+    var b=0;
+    var c=0;
+    var d=0;
+        
+        function totalfunction(){
+            
+             a=document.getElementById("l1").value;
+             b=document.getElementById("l20").value;
+             c=document.getElementById("cooljar").value;
+             d=(a*100)+(b*50)+(c*80);
+
+        
+        document.getElementById("total").value=d;
+    
+        }
+
+    </script>
+</body>
+</html>
